@@ -1,0 +1,18 @@
+@import "vendor/bootstrap";
+
+.testing {
+  color: $orange
+}
+
+
+.navbar-nav > li > .dropdown-menu {
+  background-color: #343a40;
+}
+
+.dropdown-menu > .dropdown-item {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.dropdown-menu > .dropdown-item:hover {
+  color: rgba(0, 0, 0, 0.75);
+}

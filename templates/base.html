@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Pelican Example</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=1">
+    <meta name="theme-color" content="#343a40">
+
+    {% assets "all_js" %}
+      <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+
+    {% assets "all_css" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}" type="text/css">
+    {% endassets %}
+
+    {% block extrahead %}
+    {% endblock %}
+
+
+  </head>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="padding: 0 1rem; min-height:67px;">
+      <div class="navbar-brand">
+        <a class="nav-link" href="/index.html" style="color: white">Seagull Example</a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="pull-right collapse navbar-collapse" id='nav-content'>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/second_page.html">Second Page (Example)</a>
+              <a class="dropdown-item" href="#">Another page</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <section id='main-section'>
+  <body>
+      {% block content %}
+      {% endblock %}
+  </body>
+  </section>
+
+</html>
