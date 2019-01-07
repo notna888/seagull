@@ -14,3 +14,5 @@ Some features though in case I forget.
 
 
 There's lots of improvements I've got to make to it, but for now it's okay to share I think.
+
+Named Seagull as a homage to Pelican, which is what inspired me to make this.
