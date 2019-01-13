@@ -4,6 +4,7 @@ I don't honestly expect anyone to use this, it's mostly just for me.
 
 I'll add more description of it later
 
+Needs at minimum Python 3.5, Tested & Built with 3.7.1
 
 Some features though in case I forget.
 * Compiles scss.
