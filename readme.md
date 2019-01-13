@@ -7,11 +7,11 @@ I'll add more description of it later
 Needs at minimum Python 3.5, Tested & Built with 3.7.1
 
 Some features though in case I forget.
-* Compiles scss.
-* Minifies JS and CSS.
-* Uses jinja2 for html templating.
-* Uses Jquery, Bootstrap, Popper.js.
-* Has ajax navigation that I've written.
+*   Compiles scss.
+*   Minifies JS and CSS.
+*   Uses jinja2 for html templating.
+*   Uses Jquery, Bootstrap, Popper.js.
+*   Has ajax navigation that I've written.
 
 
 There's lots of improvements I've got to make to it, but for now it's okay to share I think.
@@ -22,7 +22,7 @@ Webpack was one of the last things I actually included in it - hence why I use l
 
 
 ## Features to develop
-* Automatically picking up on all the html files and compiling them.
-* Better support for sub folders and junk?
-* Make the ajax navigation do stuff with history
-* Improve the ajax navigation in general
+*   ~~Automatically picking up on all the html files and compiling them.~~
+*   ~~Better support for sub folders and junk?~~
+*   Make the ajax navigation do stuff with history
+*   Improve the ajax navigation in general
