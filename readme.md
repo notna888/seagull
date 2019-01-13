@@ -1,6 +1,10 @@
 # Seagull Page Generation Script
 
-![](https://img.shields.io/github/license/notna888/seagull.svg?style=plastic)
+[![license][]](https://opensource.org/licenses/MIT)
+[![semver][]](http://semver.org)
+
+[license]: https://img.shields.io/github/license/notna888/seagull.svg?style=plastic
+[semver]: http://img.shields.io/:semver-0.1.1-green.svg?style=plastic
 
 
 I don't honestly expect anyone to use this, it's mostly just for me.
