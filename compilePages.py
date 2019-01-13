@@ -5,11 +5,14 @@ from webassets.ext.jinja2 import AssetsExtension
 from webassets import Bundle
 import sass
 
+
+
 import shutil
 import os
 import sys
 import http
 import re
+import pathlib
 
 # Need to remove the already compiled assets here...
 
@@ -34,11 +37,21 @@ assets_env.register('all_css', all_css)
 
 jinja_env.assets_environment = assets_env
 
-pages = ['index.html', 'second_page.html']
+pages = []
+pages_dir = 'pages'
+for path, subdirs, files in os.walk(pages_dir):
+    for name in files:
+        pages.append(os.path.join(path, name)[6:])
+print(pages)
+
 for page in pages:
-    thisTemplate = jinja_env.get_template('pages/'+page)
+    thisTemplate = jinja_env.get_template('pages/' + page)
     thisTempRendered = thisTemplate.render()
-    with open('output/'+page, 'w') as tempFile:
+    file_name = 'output/' + page
+    body_content_location = 'output/content/' + page
+    pathlib.Path(os.path.dirname(file_name)).mkdir(parents=True, exist_ok=True)
+    pathlib.Path(os.path.dirname(body_content_location)).mkdir(parents=True, exist_ok=True)
+    with open(file_name, 'w') as tempFile:
         tempFile.write(thisTempRendered)
 
     # This bit is used for my ajax shenanigans
@@ -46,7 +59,7 @@ for page in pages:
     result = re.search('<body>(.*)<\/body>', '"' + thisTempRendered.replace('"', '\"').replace('\n',' ') + '"')
     # print(result)
     onlyTheBodyPart = result.group(1)
-    with open('output/content/'+page, 'w') as tempFile:
+    with open(body_content_location, 'w') as tempFile:
         tempFile.write(onlyTheBodyPart)
 
 src = 'resources'
