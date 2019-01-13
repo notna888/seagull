@@ -1,0 +1,7 @@
+output linguist-generated=true
+resources/css/sass.css linguist-generated=true
+
+resources/css/scss/vendor linguist-vendored
+01_jquery.js linguist-vendored
+02_popper.min.js linguist-vendored
+03_bootstrap.js linguist-vendored
