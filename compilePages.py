@@ -1,3 +1,5 @@
+from run_server import launch_web_server
+
 from jinja2 import FileSystemLoader
 from jinja2 import Environment as Jinja2Environment
 import sass
@@ -59,7 +61,7 @@ def compile_pages_and_assets(dev=False):
     for path, subdirs, files in os.walk(pages_dir):
         for name in files:
             pages.append(os.path.join(path, name)[6:])
-    print(pages)
+    # print(pages)
 
     for page in pages:
         thisTemplate = jinja_env.get_template('pages/' + page)
@@ -107,5 +109,6 @@ def main(argv):
 
 if __name__ == '__main__':
     main(sys.argv[1:])
+    launch_web_server()
 
 # python -m http.server -d 'output'
